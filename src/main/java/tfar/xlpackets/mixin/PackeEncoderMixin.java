@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(PacketEncoder.class)
 public class PackeEncoderMixin {
-	@ModifyConstant(method = "encode",constant = @Constant(intValue = 2097152))
+	@ModifyConstant(method = "encode",constant = @Constant(intValue = 5242880))
 	private int xlPackets(int old) {
-		return 2000000000;
+		return 5000000000;
 	}
 }
