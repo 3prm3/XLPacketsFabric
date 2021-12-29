@@ -8,8 +8,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(FriendlyByteBuf.class)
 public class PacketByteBufMixin {
 
-	@ModifyConstant(method = "readNbt()Lnet/minecraft/nbt/CompoundTag;",constant = @Constant(longValue = 2097152L))
+	@ModifyConstant(method = "readNbt()Lnet/minecraft/nbt/CompoundTag;",constant = @Constant(longValue = 5242880L))
 	private long xlPackets(long old) {
-		return 2_000_000_000L;
+		return 5_000_000_000L;
 	}
 }
